@@ -4,7 +4,7 @@
 The tip calculator is an application for android devices for calculating the tip amount based on the desire tip percentage and it calculates total per person splitting is necessary. 
 
 ## Visuals
-<img src="https://github.com/ericngg/Tip-Calculator/blob/master/extras/main.JPG" alt="main" /> ![https://github.com/ericngg/Tip-Calculator/blob/master/extras/main.gif]
+<img src="https://github.com/ericngg/Tip-Calculator/blob/master/extras/main.JPG" alt="main" /> ![main](https://github.com/ericngg/Tip-Calculator/blob/master/extras/main.gif)
 
 ## Support
 Any bugs or suggestions can be sent to me directly.
