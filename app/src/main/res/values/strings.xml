@@ -1,4 +1,22 @@
 <resources>
     <string name="app_name">Tip Calculator</string>
     <string name="dollar">$</string>
+    <string name="option1">10</string>
+    <string name="option2">15</string>
+    <string name="option3">18</string>
+    <string name="option4">Custom:</string>
+    <string name="option5">2</string>
+    <string name="calculate">Calculate</string>
+    <string name="option6">3</string>
+    <string name="option7">4</string>
+    <string name="option8">Custom:</string>
+    <string name="result1">Tip (%):</string>
+    <string name="result3">Tip ($):</string>
+    <string name="result4">Total:</string>
+    <string name="zero">0</string>
+    <string name="tpp">Total Per Person:</string>
+    <string name="tip">Tip (%):</string>
+    <string name="people">People (#):</string>
+    <string name="tppValue">0.00</string>
+    <string name="dev">Made by Eric Ng</string>
 </resources>

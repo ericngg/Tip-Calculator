@@ -4,212 +4,336 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="16dp"
     tools:context=".MainActivity">
 
     <EditText
         android:id="@+id/etTotal"
         android:layout_width="157dp"
         android:layout_height="84dp"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="124dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="105dp"
         android:autofillHints=""
         android:ems="10"
         android:gravity="center_horizontal"
         android:inputType="numberDecimal"
         android:textSize="36sp"
+        android:maxLength="7"
+        android:imeOptions="actionDone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="LabelFor" />
 
     <TextView
         android:id="@+id/text4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="41dp"
-        android:layout_marginBottom="23dp"
-        android:text="# of People:"
-        app:layout_constraintBottom_toTopOf="@+id/textView10"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Spinner
-        android:id="@+id/sPeopleCount"
-        android:layout_width="144dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="32dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.609"
-        app:layout_constraintStart_toEndOf="@+id/text2"
-        app:layout_constraintTop_toBottomOf="@+id/sTipOption" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="45dp"
+        android:text="@string/people"
+        app:layout_constraintEnd_toStartOf="@+id/tvPeople"
+        app:layout_constraintTop_toBottomOf="@+id/text3" />
 
     <TextView
-        android:id="@+id/text5"
+        android:id="@+id/text8"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="104dp"
-        android:text="$"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/dollar"
         android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/tvPeople"
-        app:layout_constraintTop_toTopOf="@+id/tvPortion"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/text7" />
 
     <TextView
         android:id="@+id/tvPortion"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="72dp"
-        android:text="0.00"
+        android:layout_marginTop="26dp"
+        android:text="@string/tppValue"
         android:textSize="35sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/text5" />
+        app:layout_constraintStart_toEndOf="@+id/text8"
+        app:layout_constraintTop_toBottomOf="@+id/text7" />
 
     <TextView
         android:id="@+id/tvTip"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginBottom="23dp"
-        android:text="0"
-        app:layout_constraintBottom_toTopOf="@+id/tvPeople"
-        app:layout_constraintStart_toEndOf="@+id/text3" />
-
-    <TextView
-        android:id="@+id/text2"
-        android:layout_width="202dp"
-        android:layout_height="52dp"
-        android:layout_marginStart="24dp"
-        android:text="# of People:"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text1"
-        app:layout_constraintVertical_bias="0.147" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
 
     <TextView
         android:id="@+id/text3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="45dp"
         android:layout_marginBottom="23dp"
-        android:text="Tip(%):"
+        android:text="@string/result1"
         app:layout_constraintBottom_toTopOf="@+id/text4"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintEnd_toStartOf="@+id/tvTip"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
 
     <TextView
         android:id="@+id/tvPeople"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="38dp"
-        android:layout_marginBottom="23dp"
-        android:text="0"
-        app:layout_constraintBottom_toTopOf="@+id/tvTipTotal"
-        app:layout_constraintStart_toEndOf="@+id/text4" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tvTip" />
 
     <TextView
         android:id="@+id/text7"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="18dp"
-        android:text="Total Per Person:"
-        app:layout_constraintBottom_toTopOf="@+id/tvPortion"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.817"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/tpp"
+        app:layout_constraintStart_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/line" />
 
     <Button
         android:id="@+id/btnCalculate"
         android:layout_width="328dp"
         android:layout_height="58dp"
-        android:layout_marginTop="60dp"
-        android:text="Calculate"
+        android:layout_marginTop="40dp"
+        android:text="@string/calculate"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.493"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text2" />
-
-    <TextView
-        android:id="@+id/text1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="48dp"
-        android:text="Tip (%):"
-        android:textSize="36sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/etTotal" />
+        app:layout_constraintTop_toBottomOf="@+id/rgPeopleGroup" />
 
     <TextView
         android:id="@+id/tvDollar"
         android:layout_width="30dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="96dp"
-        android:layout_marginTop="44dp"
+        android:layout_height="84dp"
+        android:layout_marginTop="40dp"
         android:text="@string/dollar"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textSize="50sp"
         app:layout_constraintEnd_toStartOf="@+id/etTotal"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Spinner
-        android:id="@+id/sTipOption"
-        android:layout_width="144dp"
-        android:layout_height="75dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="16dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-
-        app:layout_constraintStart_toEndOf="@+id/text1"
-        app:layout_constraintTop_toBottomOf="@+id/etTotal" />
-
     <TextView
-        android:id="@+id/textView10"
+        android:id="@+id/text5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="23dp"
-        android:text="Tip($):"
-        app:layout_constraintBottom_toTopOf="@+id/textView12"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="45dp"
+        android:text="@string/result3"
+        app:layout_constraintEnd_toStartOf="@+id/tvTotal"
+        app:layout_constraintTop_toBottomOf="@+id/line2" />
 
     <TextView
         android:id="@+id/tvTipTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="55dp"
-        android:layout_marginBottom="63dp"
-        android:text="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView10" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/tvTotal" />
 
     <TextView
-        android:id="@+id/textView12"
+        android:id="@+id/text6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="60dp"
-        android:layout_marginBottom="20dp"
-        android:text="Total:"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="45dp"
+        android:text="@string/result4"
+        app:layout_constraintEnd_toStartOf="@+id/tvTipTotal"
+        app:layout_constraintTop_toBottomOf="@+id/text5" />
 
     <TextView
         android:id="@+id/tvTotal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="59dp"
-        android:layout_marginBottom="20dp"
-        android:text="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView12" />
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="32dp"
+        android:text="@string/zero"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintTop_toBottomOf="@+id/line2" />
 
     <View
+        android:id="@+id/line"
         android:layout_width="match_parent"
         android:layout_height="1dp"
-        android:layout_marginTop="29dp"
-        android:background="@android:color/darker_gray"
+        android:layout_marginTop="30dp"
+        android:background="#ffffff"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCalculate" />
+
+    <View
+        android:id="@+id/line2"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:background="#ffffff"
+        app:layout_constraintEnd_toStartOf="@+id/guideline"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text4" />
+
+    <RadioGroup
+        android:id="@+id/rgTipGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+
+        android:layout_marginTop="58dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/etTotal">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginEnd="2dp"
+            android:gravity="center"
+            android:text="@string/tip"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbTip1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/option1"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbTip2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/option2"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbTip3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/option3"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbTipCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/option4"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etTipCustom"
+            android:layout_width="42dp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/text_background"
+            android:enabled="false"
+            android:gravity="center"
+            android:importantForAutofill="no"
+            android:inputType="numberDecimal"
+            android:maxLength="4"
+            android:padding="2dp"
+            android:textSize="15sp"
+            android:imeOptions="actionDone"
+            tools:ignore="LabelFor"
+            tools:text="2000" />
+    </RadioGroup>
+
+    <RadioGroup
+        android:id="@+id/rgPeopleGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="32dp"
+
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rgTipGroup">
+
+        <TextView
+            android:id="@+id/text2"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginEnd="2dp"
+            android:gravity="center"
+            android:text="@string/people"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <RadioButton
+            android:id="@+id/rbPeople1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/option5"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbPeople2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/option6"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbPeople3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/option7"
+            android:textSize="16sp" />
+
+        <RadioButton
+            android:id="@+id/rbPeopleCustom"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="2dp"
+            android:text="@string/option8"
+            android:textSize="16sp" />
+
+        <EditText
+            android:id="@+id/etPeopleCustom"
+            android:layout_width="35dp"
+            android:layout_height="32dp"
+            android:layout_marginStart="2dp"
+            android:background="@drawable/text_background"
+            android:gravity="center"
+            android:importantForAutofill="no"
+            android:inputType="number"
+            android:maxLength="2"
+            android:textSize="15sp"
+            android:enabled="false"
+            tools:ignore="LabelFor"
+            android:imeOptions="actionDone"
+            tools:text="20" />
+
+    </RadioGroup>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_begin="188dp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
